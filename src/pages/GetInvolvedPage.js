@@ -1,4 +1,5 @@
 import React from "react";
+import ProjectCard from "../components/ProjectCard";
 
 function GetInvolvedPage() {
 
@@ -26,7 +27,18 @@ function GetInvolvedPage() {
                         <option value="Northern Cape">Northern Cape</option>
                     </select>
                 </div>
+                <div className="list-of-projects">
+                    <ProjectCard/>
+                    <ProjectCard/>
+                    <ProjectCard/>
+                    <ProjectCard/>
+                    <ProjectCard/>
+                    <ProjectCard/>
+                    <ProjectCard/>
+                    <ProjectCard/>
+                </div>
             </div>
+            <div className="footer-img"/>
         </div>
     )
 }
