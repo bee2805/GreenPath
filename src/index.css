@@ -114,22 +114,42 @@ a{
 }
 
 /* Landing Page */
-.landing-container{
+@keyframes swipeUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.landing-container {
   width: 95%;
   height: 90vh;
   padding-left: 5%;
   background-image: url('assets/landing_bg.svg');
   background-position: center;
   background-size: cover;
+  animation: swipeUp 1s ease-in-out forwards;
 }
 
-.landingPage-info{
+@keyframes swipeIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.landingPage-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
   width: 50%;
   height: 100%;
+  animation: swipeIn 1s ease-in-out;
 }
 
 .landingPage-info h2{
