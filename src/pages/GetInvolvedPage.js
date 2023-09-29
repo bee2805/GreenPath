@@ -7,7 +7,7 @@ function GetInvolvedPage() {
         <div className="getInvolved-container">
             <div className="getInvolved-header">
                 <div className="getInvolved-info">
-                    <h1>Start Giving back</h1>
+                    <h1>Start Giving back!</h1>
                     <p>Contributing to a sustainable planet and nurturing a more eco-conscious environment can manifest in various ways. If you're interested in engaging with sustainability initiatives, explore the following list of local projects you can join.</p>
                 </div>
             </div>
