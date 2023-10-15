@@ -15,8 +15,9 @@ function NavBar () {
                 </div>
                 <div className="navItems">
                     <NavLink to="/"><p>Home</p></NavLink>
-                    <NavLink to="/CarbonCalculator"><p>Carbon Calculator</p></NavLink>
+                    <NavLink to="/CarbonCalculator"><p>Carbon Emissions</p></NavLink>
                     <NavLink to="/GetInvolved"><p>Get Involved</p></NavLink>
+                    <NavLink to="/LetsChat"><p>Let's Chat</p></NavLink>
                 </div>
         </div>
     )
