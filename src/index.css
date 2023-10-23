@@ -391,7 +391,7 @@ a{
 
 .news-heading{
   margin-left: 5%;
-  margin-top: -90px;
+  margin-top: -50px;
 }
 
 .list-of-articles{
@@ -680,8 +680,6 @@ a{
 }
 
 .calculator-footer-img{
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: 400px;
   background-image: url('assets/calculator_footer.svg');

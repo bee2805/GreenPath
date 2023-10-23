@@ -92,6 +92,8 @@ function ClimateNews() {
             <p>Loading news...</p>
             )}
         </div>
+
+        <div className="footer-img"/>
     </div>
   );
 }
