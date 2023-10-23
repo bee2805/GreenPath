@@ -51,7 +51,7 @@ button{
 
 select{
   cursor: pointer;
-  padding: 5px 20px;
+  padding: 10px 20px;
   border-radius: 30px;
   border: none;
   font-size: 18px;
@@ -59,6 +59,7 @@ select{
   font-family: 'Open Sans';
   color: white;
   background: #6B885E;
+  outline: none;
 }
 
 button:hover{
@@ -225,6 +226,10 @@ a{
   /* background-color: aqua; */
 }
 
+.left-container h2{
+  margin-top: 80px;
+}
+
 .right-container{
   width: 45%;
   float: left;
@@ -276,15 +281,27 @@ a{
   margin-bottom: 20px;
 }
 
+.range-input{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.range-input p{
+  font-family: 'Shantell Sans';
+  color: #6B885E;
+}
+
 .range {
-  margin-top: 20px;
+  margin-top: 5px;
   -webkit-appearance: none;
   appearance: none; 
-  width: 100%;
+  width: 80%;
   cursor: pointer;
   outline: none;
   overflow: hidden;
   border-radius: 16px;
+  float: left;
 }
 
 .range::-webkit-slider-runnable-track {
@@ -317,6 +334,26 @@ a{
   border-radius: 50%;
   border: 1px solid #6b886b;
   box-shadow: -407px 0 0 400px #6b886b;
+}
+
+/* ------------------------------------------------------------- */
+/* Carbon Emissions Page */
+
+.carbonEmissions-container{
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.carbonEmissions-Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.select-options{
+  display: flex;
+  gap: 10px;
 }
 
 /* ------------------------------------------------------------- */

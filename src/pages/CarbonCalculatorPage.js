@@ -1,6 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
 function CarbonCalculatorPage () {
+
+    const [engineSize, setEngineSize] = useState("")
+    const [transmission, setTransmission] = useState("")
+    const [fuelType, setFuelType] = useState("")
+    const [cylenderAmount, setCylenderAmount] = useState("")
+    const [gearAmount, setGearAmount] = useState("")
+    const [amountOfKm, setAmountOfKm] = useState(1)
+
+    const getInputValues = () => {
+        const vehicleInfo = {
+            "Engine Size": engineSize,
+            "Transmission Type": transmission,
+            "Fuel Type": fuelType,
+            "Cylinder Amount": cylenderAmount,
+            "Gear Amount": gearAmount,
+            "Amount of Km": amountOfKm
+        };
+          
+        console.table(vehicleInfo);
+    }
 
     return(
         <>
@@ -13,7 +33,7 @@ function CarbonCalculatorPage () {
                 <div className='form'>
                     <div className="row1">
                         <label>What is the engine size of your vehicle?</label>
-                        <select>
+                        <select value={engineSize} onChange={(e) => setEngineSize(e.target.value)}>
                             <option>0.8L</option>
                             <option>1.0L</option>
                             <option>1.2L</option>
@@ -34,7 +54,7 @@ function CarbonCalculatorPage () {
                         </select>
 
                         <label>What type of transmission does your vehicle have??</label>
-                        <select>
+                        <select value={transmission} onChange={(e) => setTransmission(e.target.value)}>
                             <option>Automatic</option>
                             <option>Automated manual</option>
                             <option>Automatic with select shift</option>
@@ -42,17 +62,19 @@ function CarbonCalculatorPage () {
                         </select>
 
                         <label>What is the fuel type your vehicle uses?</label>
-                        <select>
+                        <select value={fuelType} onChange={(e) => setFuelType(e.target.value)}>
                             <option>Regular Petrol</option>
                             <option>Premium Petrol</option>
                             <option>Diesel</option>
                             <option>Ethanol</option>
                             <option>Natural gas</option>
                         </select>
+
+                        <button onClick={getInputValues}>Calculate</button>
                     </div>
                     <div className="row2">
                         <label>How many cylinders does your vehicle's engine have?</label>
-                        <select>
+                        <select value={cylenderAmount} onChange={(e) => setCylenderAmount(e.target.value)}>
                             <option>1 cylinder</option>
                             <option>2 cylinder</option>
                             <option>3 cylinder</option>
@@ -66,7 +88,7 @@ function CarbonCalculatorPage () {
                         </select>
 
                         <label>How many gears does your vehicle have?</label>
-                        <select>
+                        <select value={gearAmount} onChange={(e) => setGearAmount(e.target.value)}>
                             <option>3</option>
                             <option>4</option>
                             <option>5</option>
@@ -78,7 +100,10 @@ function CarbonCalculatorPage () {
                         </select>
 
                         <label>How many kilometers do you typically travel per week?</label>
-                        <input className="range" type="range" min="1" max="500"></input>
+                        <div className="range-input">
+                            <input className="range" type="range" min="0" max="500" value={amountOfKm} onChange={(e) => setAmountOfKm(e.target.value)}></input>
+                            <p>{amountOfKm} km</p>
+                        </div>
                     </div>
                 </div>
             <div className="right-container"></div>
