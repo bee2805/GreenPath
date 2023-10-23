@@ -360,9 +360,47 @@ a{
 /* Climate News Page */
 
 .climateNews-container{
-  width: 90%;
+  width: 100%;
+}
+
+.news-header{
+  width: 95%;
   margin-left: 5%;
-  margin-right: 5%;
+  height: 80vh;
+  background-image: url('assets/news_header.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.news-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 50%;
+  height: 80%;
+  animation: swipeIn 1s ease-in-out;
+  float: left;
+}
+
+.news-info p{
+  padding: 0;
+  width: 80%;
+  font-size: 20px;
+}
+
+.news-heading{
+  margin-left: 5%;
+  margin-top: -90px;
+}
+
+.list-of-articles{
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px; /* Adjust the gap between items as needed */
 }
 
 /* ------------------------------------------------------------- */

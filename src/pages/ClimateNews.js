@@ -74,15 +74,24 @@ function ClimateNews() {
 
   return (
     <div className="climateNews-container">
-      <h1>Climate News</h1>
+        
+        <div className="news-header">
+            <div className="news-info">
+                <h1>Knowlege is Power</h1>
+                <p>We believe staying informed is the first step towards a sustainable future. Explore the latest climate change news and empower yourself with the insights that drive positive change. Together, let's stay ahead, stay informed, and make a difference for our planet.</p>
+            </div>
+            <div className="news-header-image"/>
+        </div>
 
-      <div className="list-of-projects">
-        {renderedNews.length > 0 ? (
-          renderedNews
-        ) : (
-          <p>Loading news...</p>
-        )}
-      </div>
+        <h1 className="news-heading">Climate News</h1>
+
+        <div className="list-of-articles">
+            {renderedNews.length > 0 ? (
+            renderedNews
+            ) : (
+            <p>Loading news...</p>
+            )}
+        </div>
     </div>
   );
 }
