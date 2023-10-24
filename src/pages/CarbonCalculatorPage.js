@@ -28,7 +28,7 @@ function CarbonCalculatorPage () {
             
             <div className="left-container">
                 <h2>Calculate your carbon footprint</h2>
-                <p>There are many things that can impact your footprint, but one factor <br/> that can be quite impactful is private transport. Let's take a look at your <br/> carbon footprint based on your mode of transportation.</p>
+                <p>There are many things that can impact your footprint, but one factor that can be quite impactful is private transport. Let's take a look at your carbon footprint based on your mode of transportation.</p>
                 
                 <div className='form'>
                     <div className="row1">

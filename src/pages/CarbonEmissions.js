@@ -11,22 +11,7 @@ const CarbonEmissions = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      // Fetching list of countries
-      try {
-        const responseCountries = await axios.get(API_url + 'countries.json');
-        setCountries(responseCountries.data);
-        console.log(responseCountries.data)
-      } catch (error) {
-        console.error('Error fetching countries:', error.message);
-      }
-
-      // Fetching products
-      try {
-        const responseProducts = await axios.get(API_url + 'products.json');
-        setProducts(responseProducts.data);
-      } catch (error) {
-        console.error('Error fetching products:', error.message);
-      }
+      
     };
 
     fetchData();
@@ -35,49 +20,9 @@ const CarbonEmissions = () => {
   return (
     <div className='carbonEmissions-container'>
       <div className='carbonEmissions-Header'>
-        <h1>Carbon Emissions by Country</h1>
-
-        <div className='select-options'>
-          {countries.length === 0 ? (
-            <p>Loading countries...</p>
-          ) : (
-            <select>
-              <option disabled selected value="">
-                Select a country
-              </option>
-              {[...new Set(Object.values(countries))].map((name) => (
-                <option key={name} value={name}>
-                  {name}
-                </option>
-              ))}
-            </select>
-          )}
-
-          {products.length === 0 ? (
-            <p>Loading products...</p>
-          ) : (
-            <select>
-              <option disabled selected value="">
-                Select a product
-              </option>
-              {products.map((product) => (
-                <option key={product.name} value={product.name}>
-                  {product.name}
-                </option>
-              ))}
-            </select>
-          )}
-        </div>
+        <h1>We need human change, not climate change.</h1>
+        <p>Dive into the critical issues impacting our planet's health. Explore the harsh realities of forest loss, desertification, toxic releases, CO2 surges, and land erosion. It's time to confront the truth and rally for change.</p>
       </div>
-      <Line
-          data={{
-            labels: ["Country", "Product Emissions"],
-            datasets: [{
-              label: "Country",
-              data: [200,300,400]
-            }],
-          }}
-        />
     </div>
   );
 };

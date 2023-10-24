@@ -216,18 +216,21 @@ a{
 
 .calculator-container{
   width: 100%;
-  height: 48vh;
+  height: 800px;
 }
 
 .left-container{
   width: 55%;
   margin-left: 5%;
-  float: left;
-  /* background-color: aqua; */
 }
 
 .left-container h2{
   margin-top: 80px;
+}
+
+.left-container p{
+  width: 80%;
+  margin-bottom: 50px;
 }
 
 .right-container{
@@ -347,8 +350,18 @@ a{
 
 .carbonEmissions-Header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+}
+
+.carbonEmissions-Header h1{
+  margin-bottom: 5px;
+}
+
+.carbonEmissions-Header p{
+  width: 70%;
+  text-align: center;
+  font-size: 20px;
 }
 
 .select-options{
@@ -680,6 +693,7 @@ a{
 }
 
 .calculator-footer-img{
+  margin-top: -37px;
   width: 100%;
   height: 400px;
   background-image: url('assets/calculator_footer.svg');

@@ -19,7 +19,7 @@ function ClimateNews() {
 
       try {
         const response = await axios.request(options);
-        setNewsData(response.data.articles); // Access the "articles" property
+        setNewsData(response.data.articles);
         console.log(response.data);
       } catch (error) {
         console.error('Error fetching news:', error);
