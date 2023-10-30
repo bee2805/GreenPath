@@ -4,6 +4,7 @@ import Counter from '../components/Counter';
 
 const CarbonEmissions = () => {
   const [environmentData, setEnvironmentData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const options = {
     method: 'GET',
@@ -19,17 +20,19 @@ const CarbonEmissions = () => {
       try {
         const response = await axios.request(options);
         setEnvironmentData(response.data);
+        setLoading(false);
         console.log(response.data);
 
         // Trigger the animation when the data is loaded
         handleAnimation();
       } catch (error) {
         console.error(error);
+        setLoading(false);
       }
     };
 
     fetchData();
-  }, []); 
+  }, []);
 
   const handleAnimation = () => {
     const sections = document.querySelectorAll('.deforestation, .desertification, .chemicals, .co2, .erosion');
@@ -43,7 +46,7 @@ const CarbonEmissions = () => {
       }
     });
 
-    // Add event listener for scrolling to check visibility
+    // event listener for scrolling to check visibility
     window.addEventListener('scroll', handleScroll);
 
     return () => {
@@ -66,33 +69,43 @@ const CarbonEmissions = () => {
 
   return (
     <div className='carbonEmissions-container'>
-      <div className='carbonEmissions-Header'>
-        <h1>We need <strong>human change</strong>, <br/>NOT climate change.</h1>
-      </div>
+      {loading && 
+        <div className='loading'>
+          <h1>Loading data...</h1>
+        </div>
+      }
 
-      <div className='deforestation'>
-        <Counter counter={environmentData?.[0]?.counter} counterDescription={environmentData?.[0]?.item}/>
-      </div>
+      {!loading && (
+        <>
+          <div className='carbonEmissions-Header'>
+            <h1>We need <strong>human change</strong>, <br/>NOT climate change.</h1>
+          </div>
 
-      <div className='desertification'>
-        <Counter counter={environmentData?.[1]?.counter} counterDescription={environmentData?.[1]?.item}/>
-      </div>
+          <div className='deforestation'>
+            <Counter counter={environmentData?.[0]?.counter} counterDescription={environmentData?.[0]?.item}/>
+          </div>
 
-      <div className='chemicals'>
-        <Counter counter={environmentData?.[2]?.counter} counterDescription={environmentData?.[2]?.item}/>
-      </div>
+          <div className='desertification'>
+            <Counter counter={environmentData?.[1]?.counter} counterDescription={environmentData?.[1]?.item}/>
+          </div>
 
-      <div className='co2'>
-        <Counter counter={environmentData?.[3]?.counter} counterDescription={environmentData?.[3]?.item}/>
-      </div>
+          <div className='chemicals'>
+            <Counter counter={environmentData?.[2]?.counter} counterDescription={environmentData?.[2]?.item}/>
+          </div>
 
-      <div className='erosion'>
-        <Counter counter={environmentData?.[4]?.counter} counterDescription={environmentData?.[4]?.item}/>
-      </div>
+          <div className='co2'>
+            <Counter counter={environmentData?.[3]?.counter} counterDescription={environmentData?.[3]?.item}/>
+          </div>
 
-      <div className='carbonEmissions-Header'>
-        <h1>Lets be the change we need to ensure <br/>a brighter future for us all.</h1>
-      </div>
+          <div className='erosion'>
+            <Counter counter={environmentData?.[4]?.counter} counterDescription={environmentData?.[4]?.item}/>
+          </div>
+
+          <div className='carbonEmissions-Header'>
+            <h1>Lets be the change we need to ensure <br/>a brighter future for us all.</h1>
+          </div>
+        </>
+      )}
     </div>
   );
 };
