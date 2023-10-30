@@ -3,8 +3,8 @@ import React from "react";
 import LandingPage from "./pages/LandingPage";
 import CarbonCalculatorPage from "./pages/CarbonCalculatorPage";
 import GetInvolvedPage from "./pages/GetInvolvedPage";
-import CarbonEmissions from "./pages/CarbonEmissions";
 import ClimateNews from "./pages/ClimateNews";
+import ClimateStats from "./pages/ClimateStats";
 // Nav Bar
 import NavBar from "./components/NavBar";
 // React Routing
@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/CarbonCalculator" element={<CarbonCalculatorPage/>}/>
-        <Route path="/CarbonEmissions" element={<CarbonEmissions/>}/>
+        <Route path="/ClimateStats" element={<ClimateStats/>}/>
         <Route path="/GetInvolved" element={<GetInvolvedPage/>}/>
         <Route path="/ClimateNews" element={<ClimateNews/>}/>
       </Routes>
