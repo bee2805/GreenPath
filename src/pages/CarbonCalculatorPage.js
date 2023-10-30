@@ -6,37 +6,40 @@ function CarbonCalculatorPage () {
     const [engineSize, setEngineSize] = useState("")
     const [transmission, setTransmission] = useState("")
     const [fuelType, setFuelType] = useState("")
-    const [cylenderAmount, setCylenderAmount] = useState("")
+    const [cylinderAmount, setCylinderAmount] = useState("")
     const [gearAmount, setGearAmount] = useState("")
     const [amountOfKm, setAmountOfKm] = useState(1)
+    const [prediction, setPrediction] = useState("Input your data to find out how much CO2 your vehicle emits per week.")
+
+    const transmissionAbbreviations = {
+        Automatic: "A",
+        "Automated manual": "AM",
+        "Automatic with select shift": "AS",
+        "Continuously variable": "AV",
+        Manual: "M",
+    };
+
+    const fuelTypeAbbreviations = {
+        "Regular Petrol": "X",
+        "Premium Petrol": "Z",
+        Diesel: "D",
+        Ethanol: "E",
+        "Natural gas": "N",
+    };
 
     const getInputValues = async () => {
         try {
-            const transmissionAbbreviations = {
-                Automatic: "A",
-                "Automated manual": "AM",
-                "Automatic with select shift": "AS",
-                "Continuously variable": "AV",
-                Manual: "M",
-            };
-
-            const fuelTypeAbbreviations = {
-                "Regular Petrol": "X",
-                "Premium Petrol": "Z",
-                Diesel: "D",
-                Ethanol: "E",
-                "Natural gas": "N",
-            };
 
             const response = await axios.post("http://localhost:8000",{
                 EngineSize_L: parseFloat(engineSize),
-                Cylinders: parseInt(cylenderAmount),
+                Cylinders: parseInt(cylinderAmount),
                 Transmission: transmissionAbbreviations[transmission] + gearAmount || "", // Use abbreviation or empty string if not found
                 Fuel_Type: fuelTypeAbbreviations[fuelType],
-                FuelConsumptionComb_L_per_100_km: 0.0,
+                FuelConsumptionComb_L_per_100_km: amountOfKm,
             });
 
-            console.log("Prediction:", response.data.prediction);
+            //console.log("Prediction:", response.data.prediction);
+            setPrediction(response.data.prediction * amountOfKm + " grams per week");
 
         } catch (error) {
           console.error("Error:", error);
@@ -96,7 +99,7 @@ function CarbonCalculatorPage () {
                     </div>
                     <div className="row2">
                         <label>How many cylinders does your vehicle's engine have?</label>
-                        <select value={cylenderAmount} onChange={(e) => setCylenderAmount(e.target.value)}>
+                        <select value={cylinderAmount} onChange={(e) => setCylinderAmount(e.target.value)}>
                             <option>1 cylinder</option>
                             <option>2 cylinder</option>
                             <option>3 cylinder</option>
@@ -128,12 +131,14 @@ function CarbonCalculatorPage () {
                         </div>
                     </div>
                 </div>
+            </div>
+
             <div className="right-container">
                 <div className="vehicle-emissions-image"></div>
+                <h2>{prediction}</h2>
             </div>
-            
         </div>
-        <div className="calculator-footer-img"/></div>
+        <div className="calculator-footer-img"></div>
         </>
     )
 }
