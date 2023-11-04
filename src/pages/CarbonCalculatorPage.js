@@ -11,6 +11,8 @@ function CarbonCalculatorPage () {
     const [amountOfKm, setAmountOfKm] = useState(1)
     const [prediction, setPrediction] = useState("Input your data to find out how much CO2 your vehicle emits per week.")
 
+    const [validation, setValidation] = useState("")
+
     const transmissionAbbreviations = {
         Automatic: "A",
         "Automated manual": "AM",
@@ -29,20 +31,23 @@ function CarbonCalculatorPage () {
 
     const getInputValues = async () => {
         try {
-
-            const response = await axios.post("http://localhost:8000",{
+            // Validation: Check if all required fields are selected
+            if (!engineSize || !transmission || !fuelType || !cylinderAmount || !gearAmount) {
+                setValidation("Please select values for all fields before calculating.")
+                return;
+            }
+    
+            const response = await axios.post("http://localhost:8000", {
                 EngineSize_L: parseFloat(engineSize),
                 Cylinders: parseInt(cylinderAmount),
                 Transmission: transmissionAbbreviations[transmission] + gearAmount || "", // Use abbreviation or empty string if not found
                 Fuel_Type: fuelTypeAbbreviations[fuelType],
                 FuelConsumptionComb_L_per_100_km: amountOfKm,
             });
-
-            //console.log("Prediction:", response.data.prediction);
+    
             setPrediction(response.data.prediction * amountOfKm + " grams per week");
-
         } catch (error) {
-          console.error("Error:", error);
+            console.error("Error:", error);
         }
     };
 
@@ -53,11 +58,12 @@ function CarbonCalculatorPage () {
             <div className="left-container">
                 <h2>Calculate your carbon footprint</h2>
                 <p>There are many things that can impact your footprint, but one factor that can be quite impactful is your personal vehicle. Let's take a look at your carbon footprint based on your mode of transportation.</p>
-                
+
                 <div className='form'>
                     <div className="row1">
                         <label>What is the engine size of your vehicle?</label>
                         <select value={engineSize} onChange={(e) => setEngineSize(e.target.value)}>
+                            <option selected={true}>Select Engine size</option>
                             <option>0.8L</option>
                             <option>1.0L</option>
                             <option>1.2L</option>
@@ -79,6 +85,7 @@ function CarbonCalculatorPage () {
 
                         <label>What type of transmission does your vehicle have??</label>
                         <select value={transmission} onChange={(e) => setTransmission(e.target.value)}>
+                            <option selected={true}>Select Transmission</option>
                             <option value="Automatic">Automatic</option>
                             <option value="Automated manual">Automated manual</option>
                             <option value="Automatic with select shift">Automatic with select shift</option>
@@ -88,18 +95,19 @@ function CarbonCalculatorPage () {
 
                         <label>What is the fuel type your vehicle uses?</label>
                         <select value={fuelType} onChange={(e) => setFuelType(e.target.value)}>
+                            <option selected={true}>Select Fuel Type</option>
                             <option>Regular Petrol</option>
                             <option>Premium Petrol</option>
                             <option>Diesel</option>
                             <option>Ethanol</option>
                             <option>Natural gas</option>
                         </select>
-
                         <button onClick={getInputValues}>Calculate</button>
                     </div>
                     <div className="row2">
                         <label>How many cylinders does your vehicle's engine have?</label>
                         <select value={cylinderAmount} onChange={(e) => setCylinderAmount(e.target.value)}>
+                            <option>Select amount of cylinders</option>
                             <option>1 cylinder</option>
                             <option>2 cylinder</option>
                             <option>3 cylinder</option>
@@ -114,6 +122,7 @@ function CarbonCalculatorPage () {
 
                         <label>How many gears does your vehicle have?</label>
                         <select value={gearAmount} onChange={(e) => setGearAmount(e.target.value)}>
+                            <option selected={true}>Select Amount of gears</option>
                             <option>3</option>
                             <option>4</option>
                             <option>5</option>
@@ -126,7 +135,7 @@ function CarbonCalculatorPage () {
 
                         <label>How many kilometers do you typically travel per week?</label>
                         <div className="range-input">
-                            <input className="range" type="range" min="0" max="100" value={amountOfKm} onChange={(e) => setAmountOfKm(e.target.value)}></input>
+                            <input className="range" type="range" min="0" max="500" value={amountOfKm} onChange={(e) => setAmountOfKm(e.target.value)}></input>
                             <p>{amountOfKm} km</p>
                         </div>
                     </div>
@@ -136,6 +145,7 @@ function CarbonCalculatorPage () {
             <div className="right-container">
                 <div className="vehicle-emissions-image"></div>
                 <h2>{prediction}</h2>
+                <p className="validation">{validation}</p>
             </div>
         </div>
         <div className="calculator-footer-img"></div>

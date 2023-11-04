@@ -12,7 +12,7 @@ function LandingPage () {
                 
                 <p>Welcome to GreenPath, where every daily choice counts. Green Path helps you understand your impact, make eco-friendly decisions, and embark on a greener journey starting today.</p>
 
-                <button>Get Started</button>
+                {/* <button>Get Started</button> */}
             </div>
         </div>
     )

@@ -260,12 +260,11 @@ a{
   padding: 0;
   margin: 0;
   text-align: center;
-  margin-bottom: 50px;
 }
 
 .vehicle-emissions-image{
   width: 70%;
-  height: 300px;
+  height: 280px;
   background-image: url('assets/vehicle_emissions.png');
   background-size: cover;
   background-position: center;
@@ -315,6 +314,8 @@ a{
 }
 
 .range-input{
+  width: 100%;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -322,6 +323,9 @@ a{
 }
 
 .range-input p{
+  margin: 0;
+  padding: 0;
+  width: 15%;
   font-family: 'Shantell Sans';
   color: #6B885E;
 }
@@ -329,7 +333,7 @@ a{
 .range {
   -webkit-appearance: none;
   appearance: none; 
-  width: 80%;
+  width: 100%;
   cursor: pointer;
   outline: none;
   overflow: hidden;
@@ -367,6 +371,13 @@ a{
   border-radius: 50%;
   border: 1px solid #6b886b;
   box-shadow: -407px 0 0 400px #6b886b;
+}
+
+.validation{
+  margin-top: 5px;
+  padding: 0;
+  color: red;
+  padding-bottom: 10px;
 }
 
 /* ------------------------------------------------------------- */
