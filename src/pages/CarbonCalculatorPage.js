@@ -13,6 +13,9 @@ function CarbonCalculatorPage () {
 
     const [validation, setValidation] = useState("")
 
+    const [emissionsImage, setEmissionsImage] = useState("vehicle-emissions-image")
+    const [emissionsText, setEmissionsText] = useState("")
+
     const transmissionAbbreviations = {
         Automatic: "A",
         "Automated manual": "AM",
@@ -45,11 +48,24 @@ function CarbonCalculatorPage () {
                 FuelConsumptionComb_L_per_100_km: amountOfKm,
             });
     
-            setPrediction(response.data.prediction * amountOfKm + " grams per week");
+            const predictionInKgs = (response.data.prediction * amountOfKm / 1000).toLocaleString();
+            setPrediction(predictionInKgs + " kg per week");
+
+            // avg = 88,500
+
+            if (predictionInKgs <= 40.000) {
+                setEmissionsImage("good-emissions-image");
+                setEmiss
+            } else if (predictionInKgs <= 60.500) {
+                setEmissionsImage("average-emissions-image");
+            } else {
+                setEmissionsImage("bad-emissions-image");
+            }
+
         } catch (error) {
             console.error("Error:", error);
         }
-    };
+    };    
 
     return(
         <>
@@ -143,7 +159,7 @@ function CarbonCalculatorPage () {
             </div>
 
             <div className="right-container">
-                <div className="vehicle-emissions-image"></div>
+                <div className={emissionsImage}></div>
                 <h2>{prediction}</h2>
                 <p className="validation">{validation}</p>
             </div>

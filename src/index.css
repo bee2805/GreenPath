@@ -263,9 +263,33 @@ a{
 }
 
 .vehicle-emissions-image{
-  width: 70%;
-  height: 280px;
+  width: 95%;
+  height: 300px;
   background-image: url('assets/vehicle_emissions.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.bad-emissions-image{
+  width: 95%;
+  height: 300px;
+  background-image: url('assets/bad_emissions.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.average-emissions-image{
+  width: 95%;
+  height: 300px;
+  background-image: url('assets/average_emissions.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.good-emissions-image{
+  width: 95%;
+  height: 300px;
+  background-image: url('assets/good_emissions.png');
   background-size: cover;
   background-position: center;
 }
