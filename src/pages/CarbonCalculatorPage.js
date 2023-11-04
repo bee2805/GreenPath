@@ -1,20 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function CarbonCalculatorPage () {
 
-    const [engineSize, setEngineSize] = useState("")
-    const [transmission, setTransmission] = useState("")
-    const [fuelType, setFuelType] = useState("")
-    const [cylinderAmount, setCylinderAmount] = useState("")
-    const [gearAmount, setGearAmount] = useState("")
-    const [amountOfKm, setAmountOfKm] = useState(1)
-    const [prediction, setPrediction] = useState("Input your data to find out how much CO2 your vehicle emits per week.")
+    const [engineSize, setEngineSize] = useState("");
+    const [transmission, setTransmission] = useState("");
+    const [fuelType, setFuelType] = useState("");
+    const [cylinderAmount, setCylinderAmount] = useState("");
+    const [gearAmount, setGearAmount] = useState("");
+    const [amountOfKm, setAmountOfKm] = useState(1);
+    const [prediction, setPrediction] = useState("Input your data to find out how much CO2 your vehicle emits per week.");
 
-    const [validation, setValidation] = useState("")
-
-    const [emissionsImage, setEmissionsImage] = useState("vehicle-emissions-image")
-    const [emissionsText, setEmissionsText] = useState("")
+    const [validation, setValidation] = useState("");
+    const [emissionsClass, setEmissionsClass] = useState("emissions-image");
+    const [emissionsText, setEmissionsText] = useState("");
+    const [color, setColor] = useState("");
 
     const transmissionAbbreviations = {
         Automatic: "A",
@@ -34,38 +34,41 @@ function CarbonCalculatorPage () {
 
     const getInputValues = async () => {
         try {
-            // Validation: Check if all required fields are selected
             if (!engineSize || !transmission || !fuelType || !cylinderAmount || !gearAmount) {
-                setValidation("Please select values for all fields before calculating.")
+                setValidation("Please select values for all fields before calculating.");
                 return;
             }
-    
+
             const response = await axios.post("http://localhost:8000", {
                 EngineSize_L: parseFloat(engineSize),
                 Cylinders: parseInt(cylinderAmount),
-                Transmission: transmissionAbbreviations[transmission] + gearAmount || "", // Use abbreviation or empty string if not found
+                Transmission: transmissionAbbreviations[transmission] + gearAmount || "",
                 Fuel_Type: fuelTypeAbbreviations[fuelType],
                 FuelConsumptionComb_L_per_100_km: amountOfKm,
             });
-    
+
             const predictionInKgs = (response.data.prediction * amountOfKm / 1000).toLocaleString();
             setPrediction(predictionInKgs + " kg per week");
 
-            // avg = 88,500
 
             if (predictionInKgs <= 40.000) {
-                setEmissionsImage("good-emissions-image");
-                setEmiss
+                setEmissionsClass("good-emissions-image");
+                setEmissionsText("Awesome job! Your emissions are below the average (88.5). Keep it up!");
+                setColor("green");
             } else if (predictionInKgs <= 60.500) {
-                setEmissionsImage("average-emissions-image");
+                setEmissionsClass("average-emissions-image");
+                setEmissionsText("Not bad! Your emissions are around average, but small changes make a big impact. Let's improve together!");
+                setColor("orange");
             } else {
-                setEmissionsImage("bad-emissions-image");
+                setEmissionsClass("bad-emissions-image");
+                setEmissionsText("Time for a change! Your emissions are above average (88.5), but don't worry, we can make eco-friendly changes together!");
+                setColor("red");
             }
 
         } catch (error) {
             console.error("Error:", error);
         }
-    };    
+    };
 
     return(
         <>
@@ -105,7 +108,6 @@ function CarbonCalculatorPage () {
                             <option value="Automatic">Automatic</option>
                             <option value="Automated manual">Automated manual</option>
                             <option value="Automatic with select shift">Automatic with select shift</option>
-                            <option value="Continuously variable">Continuously variable</option>
                             <option value="Manual">Manual</option>
                         </select>
 
@@ -118,6 +120,7 @@ function CarbonCalculatorPage () {
                             <option>Ethanol</option>
                             <option>Natural gas</option>
                         </select>
+                        <p className="validation">{validation}</p>
                         <button onClick={getInputValues}>Calculate</button>
                     </div>
                     <div className="row2">
@@ -159,10 +162,11 @@ function CarbonCalculatorPage () {
             </div>
 
             <div className="right-container">
-                <div className={emissionsImage}></div>
+                <div className={emissionsClass}></div>
                 <h2>{prediction}</h2>
-                <p className="validation">{validation}</p>
+                <p className={color}>{emissionsText}</p>
             </div>
+
         </div>
         <div className="calculator-footer-img"></div>
         </>
