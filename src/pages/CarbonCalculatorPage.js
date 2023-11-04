@@ -16,6 +16,8 @@ function CarbonCalculatorPage () {
     const [emissionsText, setEmissionsText] = useState("");
     const [color, setColor] = useState("");
 
+    const [animationClass, setAnimationClass] = useState("");
+
     const transmissionAbbreviations = {
         Automatic: "A",
         "Automated manual": "AM",
@@ -30,6 +32,13 @@ function CarbonCalculatorPage () {
         Diesel: "D",
         Ethanol: "E",
         "Natural gas": "N",
+    };
+
+    const animateTransition = () => {
+        setAnimationClass("slide-out");
+        setTimeout(() => {
+          setAnimationClass("slide-in");
+        }, 300);
     };
 
     const getInputValues = async () => {
@@ -64,6 +73,8 @@ function CarbonCalculatorPage () {
                 setEmissionsText("Time for a change! Your emissions are above average (88.5), but don't worry, we can make eco-friendly changes together!");
                 setColor("red");
             }
+
+            animateTransition();
 
         } catch (error) {
             console.error("Error:", error);
@@ -162,7 +173,7 @@ function CarbonCalculatorPage () {
             </div>
 
             <div className="right-container">
-                <div className={emissionsClass}></div>
+                <div className={`${emissionsClass} ${animationClass}`}></div>
                 <h2>{prediction}</h2>
                 <p className={color}>{emissionsText}</p>
             </div>
