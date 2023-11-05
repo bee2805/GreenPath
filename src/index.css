@@ -454,7 +454,7 @@ a{
   color: red;
 }
 
-/* Bad Emissions */
+/* average Emissions */
 .bad-emissions-container{
   width: 90%;
   padding-right: 5%;
@@ -478,6 +478,11 @@ a{
   width: 100%;
   display: flex;
   gap: 30px;
+}
+
+.bad-emissions-row2 p{
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .alternative-transportation, .tires, .public-transport{
@@ -596,6 +601,80 @@ a{
   background-position: center;
 }
 
+/* bad emissions */
+
+.eco-vehicle, .fuel-option, .public-transport{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 6% 4%;
+  background-color: white;
+  box-shadow: 0px 4px 20px 0px #E4E4E4;
+  border-radius: 20px;
+}
+
+.route-planning{
+  width: 50%;
+  display: flex;
+  box-shadow: 0px 4px 20px 0px #E4E4E4;
+  border-radius: 20px;
+  padding: 6% 4%;
+  background-color: white;
+}
+
+.route-planning-img{
+  width: 60%;
+  height: 200px;
+  background-image: url('assets/route_planning.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.eco-vehicle-img{
+  width: 85%;
+  height: 300px;
+  background-image: url('assets/eco_vehicle.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fuel-option-img{
+  width: 85%;
+  height: 300px;
+  background-image: url('assets/fuel_options.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.eco-vehicle p {
+  padding: 0;
+  margin: 0;
+}
+
+.eco-vehicle h2 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.fuel-option p {
+  padding: 0;
+  margin: 0;
+}
+
+.fuel-option h2 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/* animations */
+
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -612,7 +691,10 @@ a{
 .public-transport,
 .vehicle-maintenance,
 .remote-work,
-.bad-emissions-container{
+.bad-emissions-container,
+.eco-vehicle,
+.fuel-option,
+.route-planning{
   animation: slideIn 0.5s ease-out forwards;
 }
 

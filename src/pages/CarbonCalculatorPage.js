@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import AverageEmissions from "../components/AverageEmissions";
+import BadEmissions from "../components/BadEmissions";
 
 function CarbonCalculatorPage () {
 
@@ -76,6 +77,7 @@ function CarbonCalculatorPage () {
                 setEmissionsClass("bad-emissions-image");
                 setEmissionsText("Time for a change! Your emissions are above average (88.5 km), but don't worry, we can make eco-friendly changes together!");
                 setColor("red");
+                setReduceEmissions(<BadEmissions/>)
             }
 
             animateTransition();
