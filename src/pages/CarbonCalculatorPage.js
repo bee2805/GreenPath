@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
+import AverageEmissions from "../components/AverageEmissions";
 
 function CarbonCalculatorPage () {
 
@@ -17,6 +18,7 @@ function CarbonCalculatorPage () {
     const [color, setColor] = useState("");
 
     const [animationClass, setAnimationClass] = useState("");
+    const [reduceEmissions, setReduceEmissions] = useState();
 
     const transmissionAbbreviations = {
         Automatic: "A",
@@ -62,15 +64,17 @@ function CarbonCalculatorPage () {
 
             if (predictionInKgs <= 40.000) {
                 setEmissionsClass("good-emissions-image");
-                setEmissionsText("Awesome job! Your emissions are below the average (88.5). Keep it up!");
+                setEmissionsText("You're doing an awesome job! Your emissions are below the average (88.5 km). Keep it up!");
                 setColor("green");
+                setReduceEmissions()
             } else if (predictionInKgs <= 60.500) {
                 setEmissionsClass("average-emissions-image");
                 setEmissionsText("Not bad! Your emissions are around average, but small changes make a big impact. Let's improve together!");
                 setColor("orange");
+                setReduceEmissions(<AverageEmissions/>)
             } else {
                 setEmissionsClass("bad-emissions-image");
-                setEmissionsText("Time for a change! Your emissions are above average (88.5), but don't worry, we can make eco-friendly changes together!");
+                setEmissionsText("Time for a change! Your emissions are above average (88.5 km), but don't worry, we can make eco-friendly changes together!");
                 setColor("red");
             }
 
@@ -86,7 +90,7 @@ function CarbonCalculatorPage () {
         <div className="calculator-container">
             
             <div className="left-container">
-                <h2>Calculate your carbon footprint</h2>
+                <h2>Calculate Your Vehicles Emissions</h2>
                 <p>There are many things that can impact your footprint, but one factor that can be quite impactful is your personal vehicle. Let's take a look at your carbon footprint based on your mode of transportation.</p>
 
                 <div className='form'>
@@ -179,6 +183,7 @@ function CarbonCalculatorPage () {
             </div>
 
         </div>
+        {reduceEmissions}
         <div className="calculator-footer-img"></div>
         </>
     )

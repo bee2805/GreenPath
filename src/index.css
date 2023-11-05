@@ -30,7 +30,7 @@ h3{
 
 p{
   font-family: 'Open Sans';
-  font-size: 16px;
+  font-size: 18px;
   color: #2b2b2b;
 }
 
@@ -220,7 +220,7 @@ a{
 
 .calculator-container{
   width: 100%;
-  height: 800px;
+  height: 650px;
 }
 
 .left-container{
@@ -379,7 +379,7 @@ a{
 .range-input p{
   margin: 0;
   padding: 0;
-  width: 15%;
+  width: 20%;
   font-family: 'Shantell Sans';
   color: #6B885E;
 }
@@ -452,6 +452,168 @@ a{
 
 .red{
   color: red;
+}
+
+/* Bad Emissions */
+.bad-emissions-container{
+  width: 90%;
+  padding-right: 5%;
+  padding-left: 5%;
+  height: auto;
+}
+
+.bad-emissions-container p {
+  margin-bottom: 50px;
+}
+
+.bad-emissions-row1{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.bad-emissions-row2{
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+
+.alternative-transportation, .tires, .public-transport{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 6% 4%;
+  background-color: white;
+  box-shadow: 0px 4px 20px 0px #E4E4E4;
+  border-radius: 20px;
+}
+
+.vehicle-maintenance{
+  width: 50%;
+  display: flex;
+  box-shadow: 0px 4px 20px 0px #E4E4E4;
+  border-radius: 20px;
+  padding: 6% 4%;
+  background-color: white;
+}
+
+.vehicle-maintenance-img{
+  width: 50%;
+  height: 200px;
+  background-image: url('assets/car_maintenance.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.remote-work{
+  width: 50%;
+  display: flex;
+  box-shadow: 0px 4px 20px 0px #E4E4E4;
+  border-radius: 20px;
+  padding: 6% 4%;
+  background-color: white;
+}
+
+.remote-work-img{
+  width: 50%;
+  height: 200px;
+  background-image: url('assets/remote_work.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.card-info{
+  width: 70%;
+  text-align: center;
+}
+
+.vehicle-maintenance p{
+  margin: 0;
+  padding: 0;
+}
+
+.alternative-transportation p {
+  padding: 0;
+  margin: 0;
+}
+
+.alternative-transportation h2 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.tires p {
+  padding: 0;
+  margin: 0;
+}
+
+.tires h2 {
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.public-transport p {
+  padding: 0;
+  margin: 0;
+}
+
+.public-transport h2 {
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.driving-habits-img{
+  width: 80%;
+  height: 300px;
+  background-image: url('assets/driving_habits.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.tire-img{
+  width: 80%;
+  height: 260px;
+  background-image: url('assets/tire.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.public-transport-img{
+  width: 80%;
+  height: 300px;
+  background-image: url('assets/public_transport.png');
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.alternative-transportation,
+.tires,
+.public-transport,
+.vehicle-maintenance,
+.remote-work,
+.bad-emissions-container{
+  animation: slideIn 0.5s ease-out forwards;
 }
 
 /* ------------------------------------------------------------- */
@@ -578,7 +740,7 @@ a{
   padding-right: 5%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px; /* Adjust the gap between items as needed */
+  gap: 30px;
 }
 
 /* ------------------------------------------------------------- */
@@ -661,7 +823,7 @@ a{
 .list-of-projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px; /* Adjust the gap between items as needed */
+  gap: 30px;
 }
 
 .list-of-projects .projectCard-container {
@@ -860,7 +1022,7 @@ a{
 .calculator-footer-img{
   margin-top: -160px;
   width: 100%;
-  height: 350px;
+  height: 450px;
   background-image: url('assets/calculator_footer.svg');
   background-position: center;
   background-size: cover;
