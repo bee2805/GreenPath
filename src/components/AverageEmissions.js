@@ -35,7 +35,7 @@ function AverageEmissions() {
 
                 <div className="vehicle-maintenance">
                     <div className="vehicle-maintenance-img"></div>
-                    <div className="card-info">
+                    <div className="card-info-reduce">
                         <h2>Regular Vehicle Maintenance:</h2>
                         <p>Ensure your vehicle is regularly serviced and well-maintained. Make sure to use the recommended grade of motor oil.</p>
                     </div>
@@ -43,7 +43,7 @@ function AverageEmissions() {
 
                 <div className="remote-work">
                     <div className="remote-work-img"></div>
-                    <div className="card-info">
+                    <div className="card-info-reduce">
                         <h2>Work From Home:</h2>
                         <p>If your office offers hybrid working, consider working from home for some of the days in a week.</p>
                     </div>

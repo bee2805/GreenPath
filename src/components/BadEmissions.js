@@ -33,7 +33,7 @@ function BadEmissions() {
 
                 <div className="route-planning">
                     <div className="route-planning-img"></div>
-                    <div className="card-info">
+                    <div className="card-info-reduce">
                         <h2>Smart Route Planning:</h2>
                         <p>Combine errands into one trip and use navigation apps to find the shortest and least congested routes.</p>
                     </div>
@@ -41,7 +41,7 @@ function BadEmissions() {
 
                 <div className="remote-work">
                     <div className="remote-work-img"></div>
-                    <div className="card-info">
+                    <div className="card-info-reduce">
                         <h2>Work From Home:</h2>
                         <p>If your office offers hybrid working, consider working from home for some of the days in a week.</p>
                     </div>
