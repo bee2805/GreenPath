@@ -194,6 +194,11 @@ Here, users will be able to see different sustainability projects that they can 
 * Before continuing, I conducted user tests to see how I could improve the website, and then made some changes based on the results
 * Finally, I added recommendations on how to lower your carbon emissions based on whether the result was average or bad, and I added UI changes to the vehicle emissions based on the results of the calculation.
 
+#### Recommendations from User Testing
+* Letting users login and add their own volunteer projects.
+* Contextualise the footprint calculation a bit more (what does that number mean?)
+* Give the user information on how they can reduce their cabron emissions/ suggestions
+
 #### Highlights
 * Implementing my own ML model into the project
 * I enjoyed training my model
