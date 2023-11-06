@@ -145,7 +145,7 @@ Here, the user will be able to see the detremental stats of the current environm
 
 ### Climate News
 
-On the Climate News page, the user will be able to see current environmental news articles, which are being returned from an API call. API: [Live World Data](https://rapidapi.com/TheTellusProject/api/climate-news-feed/)
+On the Climate News page, the user will be able to see current environmental news articles, which are being returned from an API call. API: [Climate News Feed](https://rapidapi.com/TheTellusProject/api/climate-news-feed/)
 
 ![image5](https://github.com/bee2805/GreenPath/blob/main/README_assets/Mockup4.png)
 
@@ -185,32 +185,30 @@ Here, users will be able to see different sustainability projects that they can 
 <!-- stipulate all of the functionality you included in the project -->
 <!-- This is your time to shine, explain the technical nuances of your project, how did you achieve the final outcome!-->
 
-* I started off my angular project by generating components and styling them using html and css
+* I started off by creating my react app, and built all the pages and components.
 * I added routing and incuded all appropriate navigation links
-* The next step was to then set up my back end with appropriate shemas routs for my CRUD functinality
-* Got the data and displayed it dynamically in angular components
+* Next, I implemented the API's on the Carbon Stats and Carbon News pages.
+* I then went on to train my vehicle emissions model, and once that was done, I implemented the the carbon calculator functionality
+* Before continuing, I conducted user tests to see how I could improve the website, and then made some changes based on the results
+* Finally, I added recommendations on how to lower your carbon emissions based on whether the result was average or bad, and I added UI changes to the vehicle emissions based on the results of the calculation.
 
 #### Highlights
-* Overall, The theme of this project was really cool. It allowed me to be super creative and free with my design choices.
-* I really enjoyed learning Angular and Typescript
-* The crafting section was my favorite part. 
+* Implementing my own ML model into the project
+* I enjoyed training my model
+* I really enjoyed making the UI state changes based on the results of the calculation
+* I had fun adding all the animations
+* I enjoyed this project as a whole because I am passionate about the environment and the importance of making changes and gaining knowledge about the environment.
 
 #### Challenges
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
-* I struggled with the select on the crafting page and inputting that data dynamically. At the end of the day I was successful, however I believe I would be able to achive the same functionality in a much simpler way and in less lines of code. I aim to acieve this in the future.
-* I also struggled to have a defualt value on the select option because I used the value property to filter my data.
-
-
-#### Above And Beyond
-
-* I added modals that pop up once editing and crafting inventory with data passed to those modals that showcase what exactly was crafted/edited.
-* The side nav was also implemented following a tutorial found on youtube.
+* I struggled with my models accuracy score. I kept getting 0.0 but ended up getting it to 0.9 using the random forest regressor.
+* I struggled with setting up the AI endpoint for my model, I ran into a few errors sich as naming convention errors.
 
 ### Future Implementation
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
-* I'd like to get the select to have a default value
-* I would love to make use of the potions that have been crafted, and maybe use them to craft other potions.
+* I'd like add more carbon calculators to the project (based on: energy usage, food consumption, different types of transportation).
+* I would like users to be able to login and add their own volunteer projects.
 
 <!-- MOCKUPS -->
 ## Final Outcome
@@ -228,7 +226,7 @@ To see a run through of the application, click below:
 [View Demonstration](https://drive.google.com/file/d/13yYQyI_oNGEweU1Nftim3kCc0yPdMXoP/view?usp=sharing)
 
 
-See the [open issues](https://github.com/bee2805/VehicleCO2Emissions/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/bee2805/GreenPath/issues) for a list of proposed features (and known issues).
 
 <!-- AUTHORS -->
 ## Authors
@@ -249,83 +247,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 <!-- all resources that you used and Acknowledgements here -->
-* [Artstation Material Studies](https://www.artstation.com/search?sort_by=relevance&query=material%20study)
-* [Artstation Potion Bottles](https://www.artstation.com/search?sort_by=relevance&query=potion%20bottles)
-* [Heading Font](https://fonts.google.com/specimen/Press+Start+2P?query=Press+Start+2P)
-* [Subheading + Paragraph Font](https://fonts.google.com/specimen/Courier+Prime?query=Courier+Prime)
-* [Background Image](https://www.vecteezy.com/vector-art/16265381-stilt-house-in-swamp-in-forest-at-night)
-* [Icons](https://fontawesome.com/)
-* [Main Mockup](https://www.mockupworld.co/free/workspace-mit-imac-scene-creator-mockup-set/)
-* [Clay Mockup](https://www.mockupworld.co/free/web-design-showcase-with-imac-macbook-and-iphone-mockup/)
-* [Wireframe Mockup](https://www.mockupworld.co/free/website-or-presentation-template-mockup/)
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* [Live World Data API](https://rapidapi.com/jonaskoscielny/api/live-world-data/)
+* [Climate News Feed API](https://rapidapi.com/TheTellusProject/api/climate-news-feed/)
+* [Imagery](https://www.freepik.com/author/freepik)
+* [VehicleCO2Emissions](https://github.com/bee2805/VehicleCO2Emissions)
