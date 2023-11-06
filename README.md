@@ -162,22 +162,19 @@ Here, users will be able to see different sustainability projects that they can 
 
 ### Ideation
 
-![image5](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Ideate_1.svg)
+![image5](https://github.com/bee2805/GreenPath/blob/main/README_assets/Ideate_1.svg)
+![image5](https://github.com/bee2805/GreenPath/blob/main/README_assets/Ideate_2.svg)
+![image5](https://github.com/bee2805/GreenPath/blob/main/README_assets/Ideate_3.svg)
+![image5](https://github.com/bee2805/GreenPath/blob/main/README_assets/Ideate_4.svg)
+![image5](https://github.com/bee2805/GreenPath/blob/main/README_assets/Ideate_5.svg)
+![image5](https://github.com/bee2805/GreenPath/blob/main/README_assets/Ideate_6.svg)
 
-![image5](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Ideate_2.svg)
 
-![image5](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Ideate_3.svg)
-
-![image5](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Ideate_4.svg)
-
-![image5](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Ideate_5.svg)
-
-![image5](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Ideate_6.svg)
 <br>
 
 ### Wireframes
 
-![image6](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Wireframes.png)
+![image6](https://github.com/bee2805/GreenPath/blob/main/README_assets/Wireframes.png)
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
