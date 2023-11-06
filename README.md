@@ -19,7 +19,7 @@
 <p align="center">
 
   <a href="https://github.com/bee2805/GreenPath">
-    <img src="https://github.com/bee2805/GreenPath/blob/main/README_assets/logo.png" alt="Logo" width="200" height="200">
+    <img src="https://github.com/bee2805/GreenPath/blob/main/README_assets/logo.svg" alt="Logo" width="200" height="200">
   </a>
     
    <br />
@@ -129,31 +129,33 @@ Head over to [VehicleCO2Emissions](https://github.com/bee2805/VehicleCO2Emission
 
 The landing page has appropriate information about GreenPath, and lets the user know what to expect when using it.
 
-![image2](https://github.com/bee2805/GreenPath/blob/main/README_assets/Mockup2.png)
+![image2](https://github.com/bee2805/GreenPath/blob/main/README_assets/LandingPage.png)
 
 ### Carbon Calculator
 
 The Carbon Calculator lets users calculate their weekly vehicle emissions based on specified parameters. This is where the ML model [VehicleCO2Emissions](https://github.com/bee2805/VehicleCO2Emissions) is used. The UI updates according to the response, letting the user if their emissions are good, average or bad. The user will also be able to see some tips on how to lower their emissions.
 
-![image3](https://github.com/bee2805/GreenPath/blob/main/README_assets/Mockup3.png)
+![image3](https://github.com/bee2805/GreenPath/blob/main/README_assets/CarbonCalculator.png)
 
 ### Climate Stats
 
 Here, the user will be able to see the detremental stats of the current environmental issues going on in the world. These stats let users know what has been going on this year with regards to topics such as deforestation, CO2 emissions, toxic gas release etc. These stats are being returend from this API: [Live World Data](https://rapidapi.com/jonaskoscielny/api/live-world-data/)
 
-![image4](https://github.com/bee2805/GreenPath/blob/main/README_assets/Mockup4.png)
+![image4](https://github.com/bee2805/GreenPath/blob/main/README_assets/ClimateStats.png)
 
 ### Climate News
 
 On the Climate News page, the user will be able to see current environmental news articles, which are being returned from an API call. API: [Climate News Feed](https://rapidapi.com/TheTellusProject/api/climate-news-feed/)
 
-![image5](https://github.com/bee2805/GreenPath/blob/main/README_assets/Mockup4.png)
+![image5](https://github.com/bee2805/GreenPath/blob/main/README_assets/ClimateNews1.png)
+
+![image5](https://github.com/bee2805/GreenPath/blob/main/README_assets/ClimateNews2.png)
 
 ### Get Envolved
 
 Here, users will be able to see different sustainability projects that they can volunteer in. If the user clicks on the project, they will be navigated to the website where they can sign up for these voluntary programs.
 
-![image6](https://github.com/bee2805/GreenPath/blob/main/README_assets/Mockup4.png)
+![image6](https://github.com/bee2805/GreenPath/blob/main/README_assets/SustainabilityProjects.png)
 
 <!-- CONCEPT PROCESS -->
 ## Concept Process
@@ -242,7 +244,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 ## Contact
 
 * **Bronwyn Potgieter** - [bronwyn.potgieter@yahoo.co.za](mailto:bronwyn.potgieter@yahoo.co.zas) - [@bronns_designs](https://www.instagram.com/bronns_designs/) 
-* **Project Link** - https://github.com/bee2805/VehicleCO2Emissions
+* **Project Link** - https://github.com/bee2805/GreenPath
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
