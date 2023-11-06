@@ -49,38 +49,38 @@ function CarbonCalculatorPage () {
             if (!engineSize || !transmission || !fuelType || !cylinderAmount || !gearAmount) {
                 setValidation("Please select values for all fields before calculating.");
                 return;
-            }
-
-            const response = await axios.post("http://localhost:8000", {
-                EngineSize_L: parseFloat(engineSize),
-                Cylinders: parseInt(cylinderAmount),
-                Transmission: transmissionAbbreviations[transmission] + gearAmount || "",
-                Fuel_Type: fuelTypeAbbreviations[fuelType],
-                FuelConsumptionComb_L_per_100_km: amountOfKm,
-            });
-
-            const predictionInKgs = (response.data.prediction * amountOfKm / 1000).toLocaleString();
-            setPrediction(predictionInKgs + " kg per week");
-
-
-            if (predictionInKgs <= 40.000) {
-                setEmissionsClass("good-emissions-image");
-                setEmissionsText("You're doing an awesome job! Your emissions are below the average (88.5 kg). Keep it up!");
-                setColor("green");
-                setReduceEmissions()
-            } else if (predictionInKgs <= 60.500) {
-                setEmissionsClass("average-emissions-image");
-                setEmissionsText("Not bad! Your emissions are around average, but small changes make a big impact. Let's improve together!");
-                setColor("orange");
-                setReduceEmissions(<AverageEmissions/>)
             } else {
-                setEmissionsClass("bad-emissions-image");
-                setEmissionsText("Time for a change! Your emissions are above average (88.5 kg), but don't worry, we can make eco-friendly changes together!");
-                setColor("red");
-                setReduceEmissions(<BadEmissions/>)
-            }
+                const response = await axios.post("http://localhost:8000", {
+                    EngineSize_L: parseFloat(engineSize),
+                    Cylinders: parseInt(cylinderAmount),
+                    Transmission: transmissionAbbreviations[transmission] + gearAmount || "",
+                    Fuel_Type: fuelTypeAbbreviations[fuelType],
+                    FuelConsumptionComb_L_per_100_km: amountOfKm,
+                });
 
-            animateTransition();
+                const predictionInKgs = (response.data.prediction * amountOfKm / 1000).toLocaleString();
+                setPrediction(predictionInKgs + " kg per week");
+    
+    
+                if (predictionInKgs <= 40.000) {
+                    setEmissionsClass("good-emissions-image");
+                    setEmissionsText("You're doing an awesome job! Your emissions are below the average (88.5 kg). Keep it up!");
+                    setColor("green");
+                    setReduceEmissions()
+                } else if (predictionInKgs <= 60.500) {
+                    setEmissionsClass("average-emissions-image");
+                    setEmissionsText("Not bad! Your emissions are around average, but small changes make a big impact. Let's improve together!");
+                    setColor("orange");
+                    setReduceEmissions(<AverageEmissions/>)
+                } else {
+                    setEmissionsClass("bad-emissions-image");
+                    setEmissionsText("Time for a change! Your emissions are above average (88.5 kg), but don't worry, we can make eco-friendly changes together!");
+                    setColor("red");
+                    setReduceEmissions(<BadEmissions/>)
+                }
+    
+                animateTransition();
+            }
 
         } catch (error) {
             console.error("Error:", error);
