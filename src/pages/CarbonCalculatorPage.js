@@ -65,7 +65,7 @@ function CarbonCalculatorPage () {
 
             if (predictionInKgs <= 40.000) {
                 setEmissionsClass("good-emissions-image");
-                setEmissionsText("You're doing an awesome job! Your emissions are below the average (88.5 km). Keep it up!");
+                setEmissionsText("You're doing an awesome job! Your emissions are below the average (88.5 kg). Keep it up!");
                 setColor("green");
                 setReduceEmissions()
             } else if (predictionInKgs <= 60.500) {
@@ -75,7 +75,7 @@ function CarbonCalculatorPage () {
                 setReduceEmissions(<AverageEmissions/>)
             } else {
                 setEmissionsClass("bad-emissions-image");
-                setEmissionsText("Time for a change! Your emissions are above average (88.5 km), but don't worry, we can make eco-friendly changes together!");
+                setEmissionsText("Time for a change! Your emissions are above average (88.5 kg), but don't worry, we can make eco-friendly changes together!");
                 setColor("red");
                 setReduceEmissions(<BadEmissions/>)
             }
