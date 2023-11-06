@@ -222,7 +222,7 @@ Here, users will be able to see different sustainability projects that they can 
 
 ### Final Mockup
 
-![image1](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Mockup1.png)
+![image1](https://github.com/bee2805/GreenPath/blob/main/README_assets/Mockup2.png)
 <br>
 
 <!-- VIDEO DEMONSTRATION -->
