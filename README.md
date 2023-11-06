@@ -24,8 +24,8 @@
     
    <br />
    <br />
-   <!-- TODO: Add demo video -->
-   <!-- <a href="https://drive.google.com/file/d/13yYQyI_oNGEweU1Nftim3kCc0yPdMXoP/view?usp=sharing">View Demo</a> -->
+
+   <a href="https://drive.google.com/file/d/1oDMOZGuCXlBvzEyEf5mGN9UssmxGmq-l/view?usp=sharing">View Demo</a>
     ·
     <a href="https://github.com/bee2805/GreenPath/issues">Report Bug</a>
     ·
@@ -222,7 +222,7 @@ Here, users will be able to see different sustainability projects that they can 
 
 ### Final Mockup
 
-![image7](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Mockup5.png)
+![image1](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Mockup1.png)
 <br>
 
 <!-- VIDEO DEMONSTRATION -->
@@ -230,7 +230,7 @@ Here, users will be able to see different sustainability projects that they can 
 
 To see a run through of the application, click below:
 
-[View Demonstration](https://drive.google.com/file/d/13yYQyI_oNGEweU1Nftim3kCc0yPdMXoP/view?usp=sharing)
+[View Demonstration](https://drive.google.com/file/d/1oDMOZGuCXlBvzEyEf5mGN9UssmxGmq-l/view?usp=sharing)
 
 
 See the [open issues](https://github.com/bee2805/GreenPath/issues) for a list of proposed features (and known issues).
