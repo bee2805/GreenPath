@@ -174,7 +174,9 @@ Here, users will be able to see different sustainability projects that they can 
 
 ### Wireframes
 
-![image6](https://github.com/bee2805/GreenPath/blob/main/README_assets/Wireframes.png)
+![image6](https://github.com/bee2805/GreenPath/blob/main/README_assets/wireframe1.svg)
+![image6](https://github.com/bee2805/GreenPath/blob/main/README_assets/wireframe2.svg)
+![image6](https://github.com/bee2805/GreenPath/blob/main/README_assets/wireframe3.svg)
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
