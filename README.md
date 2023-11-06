@@ -188,22 +188,33 @@ Here, users will be able to see different sustainability projects that they can 
 <!-- This is your time to shine, explain the technical nuances of your project, how did you achieve the final outcome!-->
 
 * I started off by creating my react app, and built all the pages and components.
-* I added routing and incuded all appropriate navigation links
+* I added routing and incuded all appropriate navigation links.
 * Next, I implemented the API's on the Carbon Stats and Carbon News pages.
-* I then went on to train my vehicle emissions model, and once that was done, I implemented the the carbon calculator functionality
-* Before continuing, I conducted user tests to see how I could improve the website, and then made some changes based on the results
+* I then went on to train my vehicle emissions model, and once that was done, I implemented the the carbon calculator functionality.
+* Before continuing, I conducted user tests to see how I could improve the website, and then made some changes based on the results.
 * Finally, I added recommendations on how to lower your carbon emissions based on whether the result was average or bad, and I added UI changes to the vehicle emissions based on the results of the calculation.
+
+#### Main Insights from User Testing
+* Users Found the site easy to navigate through.
+* The users enjoyed the UI.
+* The users enjoyed the main feature of the site (Carbon Calculator).
+* The main thing users didnt like about the site was that the results from the calculation was just a number in kg's, and there wasn't an idication of whether that was good or bad. They also said they would like to see tips on how to lower emissions.
+* Overall, the site addresses the climate crisis in an impactful way.
 
 #### Recommendations from User Testing
 * Letting users login and add their own volunteer projects.
-* Contextualise the footprint calculation a bit more (what does that number mean?)
-* Give the user information on how they can reduce their cabron emissions/ suggestions
+* Contextualise the footprint calculation a bit more (what does that number mean?).
+* Give the user information on how they can reduce their cabron emissions/ suggestions.
+
+#### Changes made based on User Testing Results
+* I contexualised the footprint calculation result a bit more, letting the user know if their emissions are good, average or bad.
+* The user now get information on how they can reduce their cabron emissions.
 
 #### Highlights
-* Implementing my own ML model into the project
-* I enjoyed training my model
-* I really enjoyed making the UI state changes based on the results of the calculation
-* I had fun adding all the animations
+* Implementing my own ML model into the project.
+* I enjoyed training my model.
+* I really enjoyed making the UI state changes based on the results of the calculation.
+* I had fun adding all the animations.
 * I enjoyed this project as a whole because I am passionate about the environment and the importance of making changes and gaining knowledge about the environment.
 
 #### Challenges
