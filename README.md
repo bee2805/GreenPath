@@ -3,10 +3,10 @@
 
 <br />
 
-![GitHub repo size](https://img.shields.io/github/repo-size/bee2805/VehicleCO2Emissions)
-![GitHub watchers](https://img.shields.io/github/watchers/bee2805/VehicleCO2Emissions)
-![GitHub language count](https://img.shields.io/github/languages/count/bee2805/VehicleCO2Emissions)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/bee2805/VehicleCO2Emissions)
+![GitHub repo size](https://img.shields.io/github/repo-size/bee2805/GreenPath)
+![GitHub watchers](https://img.shields.io/github/watchers/bee2805/GreenPath)
+![GitHub language count](https://img.shields.io/github/languages/count/bee2805/GreenPath)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/bee2805/GreenPath)
 
 <br/>
 
@@ -18,18 +18,18 @@
 
 <p align="center">
 
-  <a href="https://github.com/bee2805/VehicleCO2Emissions">
-    <img src="https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_files/logo.png" alt="Logo" width="200" height="200">
+  <a href="https://github.com/bee2805/GreenPath">
+    <img src="https://github.com/bee2805/GreenPath/blob/main/README_assets/logo.png" alt="Logo" width="200" height="200">
   </a>
     
    <br />
    <br />
    <!-- TODO: Add demo video -->
-   <a href="https://drive.google.com/file/d/13yYQyI_oNGEweU1Nftim3kCc0yPdMXoP/view?usp=sharing">View Demo</a>
+   <!-- <a href="https://drive.google.com/file/d/13yYQyI_oNGEweU1Nftim3kCc0yPdMXoP/view?usp=sharing">View Demo</a> -->
     ·
-    <a href="https://github.com/bee2805/VehicleCO2Emissions/issues">Report Bug</a>
+    <a href="https://github.com/bee2805/GreenPath/issues">Report Bug</a>
     ·
-    <a href="https://github.com/bee2805/VehicleCO2Emissions/issues">Request Feature</a>
+    <a href="https://github.com/bee2805/GreenPath/issues">Request Feature</a>
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -62,20 +62,20 @@
 <!--PROJECT DESCRIPTION-->
 ## About the Project
 <!-- header image of project -->
-![image1](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_files/Mockup1.png)
+![image1](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Mockup1.png)
 
 ### Project Description
 
-The Wicca House is the place to go to fulfill all your wicca needs! This MEAN stack application allowa users to track an inventory full of different ingredients and use their inventory to craft magical potions! All data is stored on MongoDB and dynamically displayed using angular components.
+GreenPath is a website that helps users understand their enviromnetal impact based on the daily choices they make. This project uses a trained machine learning model to help users predict the weekly CO2 emissions of their vehicle, and based on that, they are able to get tips on how to lower their emission. GreenPath helps users understand the importance of the climate crisis and helps them make more eco-friendly decisions.
 
 ### Built With
 
-* [MongoDb](https://www.mongodb.com/cloud/atlas/lp/try4?utm_source=google&utm_campaign=search_gs_pl_evergreen_atlas_core_prosp-brand_gic-null_emea-za_ps-all_desktop_eng_lead&utm_term=mongodb&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624560&adgroup=115749711783&cq_cmp=12212624560&gclid=CjwKCAjwrdmhBhBBEiwA4Hx5gwIGpkEruXr_caRUjW88LyJqH6PRomd6JRg8vT2zCXD2nG2yF58cwBoCmsQQAvD_BwE)
-* [Express](https://expressjs.com/)
-* [Angular](https://angular.io/)
-* [Node](https://nodejs.org/en)
-* [Typescript](https://www.typescriptlang.org/)
-* [AngularMaterial](https://material.angular.io/)
+* [Jupyter Notebook](https://jupyter.org/)
+* [Pandas](https://pandas.pydata.org/)
+* [Sklearn](https://pypi.org/project/sklearn/)
+* [ReactJS](https://react.dev/)
+* [NodeJS](https://nodejs.org/en)
+* [axios](https://axios-http.com/)
 
 ## Getting Started
 <!-- GETTING STARTED -->
@@ -89,77 +89,95 @@ Ensure that you have GitHub desktop and Android Studio downloaded onto your mach
 Here are a couple of ways to clone this repo:
 
 1. GitHub Desktop </br>
-Enter `https://github.com/bee2805/BattleofTheGenerations.git` into the URL field and press the `Clone` button.
+Enter `https://github.com/bee2805/GreenPath.git` into the URL field and press the `Clone` button.
 
 2. Clone Repository </br>
 Run the following in the command-line to clone the project:
    ```sh
-   git clone https://github.com/bee2805/BattleofTheGenerations.git
+   git clone https://github.com/bee2805/GreenPath.git
    ```
     Open `Software` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
 <!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
-## Angular Know How
+# Getting Started with Create React App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Development server
+## Available Scripts
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+In the project directory, you can run:
 
-### Code scaffolding
+### `npm install`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Installs any dependencies/packages you may need for the application
 
-### Build
+### `npm start`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Running unit tests
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Getting Started with ML Model API
 
-### Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-### Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Head over to [VehicleCO2Emissions](https://github.com/bee2805/VehicleCO2Emissions) and clone the project onto your machine. Follow the documentation to run the model on local host
 
 <!-- FEATURES AND FUNCTIONALITY-->
 ## Features and Functionality
 
 ### Landing Page
 
-The landing page has appropriate information about The Wicca house, and lets the user know what to expect when using it.
+The landing page has appropriate information about GreenPath, and lets the user know what to expect when using it.
 
-![image2](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_files/Mockup2.png)
+![image2](https://github.com/bee2805/GreenPath/blob/main/README_assets/Mockup2.png)
 
-### Inventory
+### Carbon Calculator
 
-The inventory page showcases a list of all the ingredients in the inventory. These ingredients can be filtered based on their category (light magic, dark magic or the potions that have been, and can be crafted). The user can also update the amount of inventory if they need more to craft their desired potion, but they have to be verified before doing so.
+The Carbon Calculator lets users calculate their weekly vehicle emissions based on specified parameters. This is where the ML model [VehicleCO2Emissions](https://github.com/bee2805/VehicleCO2Emissions) is used. The UI updates according to the response, letting the user if their emissions are good, average or bad. The user will also be able to see some tips on how to lower their emissions.
 
-![image3](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_files/Mockup3.png)
+![image3](https://github.com/bee2805/GreenPath/blob/main/README_assets/Mockup3.png)
 
-### Crafting Section
+### Climate Stats
 
-Here, the user (if verified) will be able to select a potion that they wish to craft. The potion can only be crafted if there are enough ingredients in the inventory. Once a potion is crafted, it can be found on the unventory page under 'potions', and the quantity of the used ingridients will be updated accordingly.
+Here, the user will be able to see the detremental stats of the current environmental issues going on in the world. These stats let users know what has been going on this year with regards to topics such as deforestation, CO2 emissions, toxic gas release etc. These stats are being returend from this API: [Live World Data](https://rapidapi.com/jonaskoscielny/api/live-world-data/)
 
-![image4](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_files/Mockup4.png)
+![image4](https://github.com/bee2805/GreenPath/blob/main/README_assets/Mockup4.png)
+
+### Climate News
+
+On the Climate News page, the user will be able to see current environmental news articles, which are being returned from an API call. API: [Live World Data](https://rapidapi.com/TheTellusProject/api/climate-news-feed/)
+
+![image5](https://github.com/bee2805/GreenPath/blob/main/README_assets/Mockup4.png)
+
+### Get Envolved
+
+Here, users will be able to see different sustainability projects that they can volunteer in. If the user clicks on the project, they will be navigated to the website where they can sign up for these voluntary programs.
+
+![image6](https://github.com/bee2805/GreenPath/blob/main/README_assets/Mockup4.png)
 
 <!-- CONCEPT PROCESS -->
 ## Concept Process
 
-* I started off my ideation process by coming up with a few ideas for the theme. Once I had my theme in place, I thought about different ingredients and potions that could be included. Thereafter, I sketched my initial wifeframes and got to work!
+* I started off my ideation process by coming up with a few ideas for the theme. Once I had my theme in place, I thought about different ideas for the AI implementation - which resulted in the carbon calculator. I initially decided to calulate your carbon footprint based on various factors (Energy Usage, Transportation, Food Consumption etc.), but ended up only choosing the vehicle emissions as I would have had to train multiple models with a few different datasets and it would not have fit into my timeline.
 
 ### Ideation
 
-![image5](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_files/Ideation.png)
+![image5](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Ideate_1.svg)
+
+![image5](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Ideate_2.svg)
+
+![image5](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Ideate_3.svg)
+
+![image5](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Ideate_4.svg)
+
+![image5](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Ideate_5.svg)
+
+![image5](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Ideate_6.svg)
 <br>
 
 ### Wireframes
 
-![image6](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_files/Wireframes.png)
+![image6](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Wireframes.png)
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
@@ -200,7 +218,7 @@ Here, the user (if verified) will be able to select a potion that they wish to c
 
 ### Final Mockup
 
-![image7](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_files/Mockup5.png)
+![image7](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Mockup5.png)
 <br>
 
 <!-- VIDEO DEMONSTRATION -->
