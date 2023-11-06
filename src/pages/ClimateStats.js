@@ -93,11 +93,11 @@ const CarbonEmissions = () => {
             <Counter counter={environmentData?.[2]?.counter} counterDescription={environmentData?.[2]?.item}/>
           </div>
 
-          <div className='co2'>
+          <div className='erosion'>
             <Counter counter={environmentData?.[3]?.counter} counterDescription={environmentData?.[3]?.item}/>
           </div>
 
-          <div className='erosion'>
+          <div className='co2'>
             <Counter counter={environmentData?.[4]?.counter} counterDescription={environmentData?.[4]?.item}/>
           </div>
 
