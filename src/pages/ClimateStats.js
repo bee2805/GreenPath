@@ -23,7 +23,6 @@ const CarbonEmissions = () => {
         setLoading(false);
         console.log(response.data);
 
-        // Trigger the animation when the data is loaded
         handleAnimation();
       } catch (error) {
         console.error(error);

@@ -62,7 +62,7 @@
 <!--PROJECT DESCRIPTION-->
 ## About the Project
 <!-- header image of project -->
-![image1](https://github.com/bee2805/VehicleCO2Emissions/blob/main/README_assets/Mockup1.png)
+![image1](https://github.com/bee2805/GreenPath/blob/main/README_assets/Mockup1.png)
 
 ### Project Description
 
